@@ -18,23 +18,23 @@ spec:
           ports:
             - name: vproapp-port
               containerPort: 8080
-      # Need DB created before application
-      initContainers:
-        - name: init-mydb
-          image: busybox
-          command:
-            [
-              "sh",
-              "-c",
-              "until nslookup vprodb; do echo waiting for mydb; sleep 2; done;"
-            ]
-      # Need Memcached created before application
-      initContainers:
-        - name: init-memcache
-          image: busybox
-          command:
-            [
-              "sh",
-              "-c",
-              "until nslookup vpromc; do echo waiting for mydb; sleep 2; done;"
-            ]
+      # # Need DB created before application
+      # initContainers:
+      #   - name: init-mydb
+      #     image: busybox
+      #     command:
+      #       [
+      #         "sh",
+      #         "-c",
+      #         "until nslookup vprodb; do echo waiting for mydb; sleep 2; done;"
+      #       ]
+      # # Need Memcached created before application
+      # initContainers:
+      #   - name: init-memcache
+      #     image: busybox
+      #     command:
+      #       [
+      #         "sh",
+      #         "-c",
+      #         "until nslookup vpromc; do echo waiting for mydb; sleep 2; done;"
+      #       ]
