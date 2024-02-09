@@ -5,8 +5,8 @@ metadata:
 spec:
   type: ClusterIP
   selector:
-    app: vpromc
+    app: vprocache01
   ports:
     - port: 11211
-      targetPort: vprocache01-port
+      targetPort: vprocache-port
       protocol: TCP
