@@ -39,7 +39,7 @@ spec:
           awsElasticBlockStore:
             volumeID: vol-0d3f3d9298149a785
             fsType: ext41
-      # To delete existing data in "lost+found" folder with initContainers before main container run
+      # To delete existing data in "lost+found" folder with initContainers before main container is running
       initContainers:
         - name: busybox
           image: busybox:latest
